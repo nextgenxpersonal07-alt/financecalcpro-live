@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-finance",
+      "description": "Professional financial chart and workspace",
+      "imageUrl": "https://picsum.photos/seed/finance-hero/1200/600",
+      "imageHint": "finance chart"
+    },
+    {
+      "id": "blog-investing",
+      "description": "Stock market trends and investment growth",
+      "imageUrl": "https://picsum.photos/seed/investing/800/600",
+      "imageHint": "stock market"
+    },
+    {
+      "id": "blog-tax",
+      "description": "Tax planning and documents",
+      "imageUrl": "https://picsum.photos/seed/tax-planning/800/600",
+      "imageHint": "tax planning"
+    },
+    {
+      "id": "blog-retirement",
+      "description": "Comfortable retirement and future planning",
+      "imageUrl": "https://picsum.photos/seed/retirement/800/600",
+      "imageHint": "retirement planning"
+    }
+  ]
+}
