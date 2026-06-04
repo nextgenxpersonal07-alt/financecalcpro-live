@@ -13,19 +13,20 @@ import {
   Briefcase,
   Search,
   ArrowRight,
-  Play
+  Play,
+  Receipt
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   const popularCalculators = [
-    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your loan installments instantly" },
+    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your monthly loan installments instantly" },
     { title: "SIP Calculator", icon: TrendingUp, href: "/calculators/sip", desc: "Estimate mutual fund returns for your goals" },
-    { title: "Income Tax", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your tax savings and liabilities" },
-    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Returns for Fixed Deposits & RD" },
-    { title: "Home Loan", icon: Landmark, href: "/calculators/home-loan", desc: "Plan your dream home budget" },
-    { title: "Retirement", icon: PieChart, href: "/calculators/retirement", desc: "Build a corpus for your sunset years" },
+    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Calculate returns for Fixed Deposits maturity" },
+    { title: "RD Calculator", icon: Calculator, href: "/calculators/rd", desc: "Plan your Recurring Deposit savings" },
+    { title: "GST Calculator", icon: Receipt, href: "/calculators/gst", desc: "Quick Goods and Service Tax estimation" },
+    { title: "Income Tax Calculator", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your annual tax savings and liability" },
   ];
 
   return (
@@ -96,7 +97,7 @@ export default function Home() {
           </div>
           <Button variant="ghost" asChild className="group">
             <Link href="/calculators">
-              View all 20+ tools <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              View all tools <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>
@@ -106,7 +107,7 @@ export default function Home() {
             const Icon = calc.icon;
             return (
               <Link key={i} href={calc.href}>
-                <Card className="group hover:shadow-xl transition-all duration-300 border-primary/10 hover:border-primary/30 overflow-hidden">
+                <Card className="group hover:shadow-xl transition-all duration-300 border-primary/10 hover:border-primary/30 overflow-hidden cursor-pointer h-full">
                   <CardContent className="p-8">
                     <div className="flex items-start justify-between">
                       <div className="space-y-4">
@@ -116,7 +117,7 @@ export default function Home() {
                         <h3 className="text-xl font-bold font-headline">{calc.title}</h3>
                         <p className="text-sm text-muted-foreground">{calc.desc}</p>
                       </div>
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-4 group-hover:translate-x-0">
                         <ArrowRight className="w-5 h-5 text-primary" />
                       </div>
                     </div>
