@@ -1,14 +1,21 @@
 
 import { CalculatorContainer } from "@/components/calculators/calculator-container";
-import { GSTCalculator } from "@/components/calculators/gst-calculator";
+import { InflationCalculator } from "@/components/calculators/inflation-calculator";
+import { AdPlaceholder } from "@/components/ads/ad-placeholder";
+
+export const metadata = {
+  title: "Inflation Calculator | Purchasing Power Tool | FinanceCalc Pro",
+  description: "Understand how inflation erodes your purchasing power over time and how much you will need in the future.",
+};
 
 export default function InflationPage() {
   return (
     <CalculatorContainer
       title="Inflation Calculator"
-      description="Understand how inflation impacts your purchasing power."
+      description="Plan your future by understanding the impact of rising costs on your wealth."
+      sidebar={<AdPlaceholder />}
     >
-      <GSTCalculator />
+      <InflationCalculator />
     </CalculatorContainer>
   );
 }
