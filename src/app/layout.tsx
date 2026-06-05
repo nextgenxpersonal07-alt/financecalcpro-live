@@ -5,6 +5,7 @@ import { Navbar } from '@/components/navigation/navbar';
 import { MobileNav } from '@/components/navigation/mobile-nav';
 import { Footer } from '@/components/navigation/footer';
 import { ThemeProvider } from '@/components/theme-provider';
+import { PageHeader } from '@/components/navigation/page-header';
 
 export const metadata: Metadata = {
   title: 'FinanceCalc Pro | Premium Financial Calculators',
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className="font-body antialiased min-h-screen flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Navbar />
+          <PageHeader />
           <main className="flex-1 pb-20 lg:pb-0">
             {children}
           </main>
