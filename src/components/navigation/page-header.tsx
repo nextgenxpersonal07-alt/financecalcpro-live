@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft, ChevronRight, Home } from "lucide-react";
@@ -30,8 +30,13 @@ const PATH_MAP: Record<string, string> = {
 export function PageHeader() {
   const pathname = usePathname();
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
 
-  if (pathname === "/") return null;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || pathname === "/") return null;
 
   const pathSegments = pathname.split("/").filter(Boolean);
 
@@ -79,11 +84,11 @@ export function PageHeader() {
 
             return (
               <React.Fragment key={href}>
-                <ChevronRight className="w-3 h-3 opacity-50 shrink-0" />
+                <ChevronRight className="lucide lucide-chevron-right w-3 h-3 opacity-50 shrink-0" />
                 {isLast ? (
                   <span className="text-primary font-bold truncate max-w-[150px]">{label}</span>
                 ) : (
-                  <Link href={href} className="hover:text-primary transition-colors shrink-0">
+                  <Link href={href} className="flex items-center hover:text-primary transition-colors shrink-0">
                     {label}
                   </Link>
                 )}

@@ -3,9 +3,15 @@
 import Link from "next/link";
 import { Home, Calculator, TrendingUp, BookOpen, User } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export function MobileNav() {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = [
     { icon: Home, label: "Home", href: "/" },
@@ -14,6 +20,8 @@ export function MobileNav() {
     { icon: BookOpen, label: "Blog", href: "/blog" },
     { icon: User, label: "Profile", href: "/dashboard" },
   ];
+
+  if (!mounted) return null;
 
   return (
     <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-xl border-t px-2 h-[4.5rem] flex items-center justify-around shadow-[0_-2px_10px_rgba(0,0,0,0.1)] pb-safe">

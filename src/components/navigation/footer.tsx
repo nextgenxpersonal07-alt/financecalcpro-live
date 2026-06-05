@@ -2,8 +2,15 @@
 
 import Link from "next/link";
 import { Calculator, Facebook, Instagram, Twitter, Linkedin, Github } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-card border-t pt-16 pb-24 lg:pb-16 mt-auto">
       <div className="container mx-auto px-4">
@@ -65,7 +72,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} FinanceCalc Pro. All rights reserved. Professional financial calculations at your fingertips.
+          © {year || '...'} FinanceCalc Pro. All rights reserved. Professional financial calculations at your fingertips.
         </div>
       </div>
     </footer>
