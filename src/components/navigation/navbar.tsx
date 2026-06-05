@@ -1,13 +1,15 @@
+
 "use client"
 
 import Link from "next/link";
-import { Search, Moon, Sun, Calculator as CalcIcon, X, ArrowRight } from "lucide-react";
+import { Search, Moon, Sun, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useRef } from "react";
 import { ALL_CALCULATORS, type Calculator } from "@/lib/calculators";
 import { useRouter } from "next/navigation";
+import { Logo } from "@/components/brand/logo";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -70,10 +72,7 @@ export function Navbar() {
       <div className="container mx-auto h-16 flex items-center justify-between gap-4">
         {!mobileSearchOpen && (
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <CalcIcon className="text-primary-foreground w-5 h-5" />
-            </div>
-            <span className="font-headline font-bold text-lg sm:text-xl tracking-tight">FinanceCalc <span className="text-primary">Pro</span></span>
+            <Logo size="md" />
           </Link>
         )}
 
@@ -87,7 +86,6 @@ export function Navbar() {
         </nav>
 
         <div className={`flex items-center gap-2 ${mobileSearchOpen ? 'flex-1' : 'ml-auto relative'}`} ref={searchRef}>
-          {/* Desktop & Mobile Search Input */}
           <div className={`${mobileSearchOpen ? 'flex' : 'hidden'} md:flex relative w-full items-center gap-2`}>
             <div className="relative w-full">
               <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -115,7 +113,6 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Search Suggestions Dropdown */}
           {showDropdown && (
             <div className="absolute top-full left-0 right-0 mt-2 bg-card border rounded-2xl shadow-xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200 z-[60]">
               <div className="max-h-[60vh] md:max-h-[300px] overflow-y-auto">
