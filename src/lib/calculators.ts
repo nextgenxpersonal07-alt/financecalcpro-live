@@ -29,6 +29,9 @@ export const ALL_CALCULATORS: Calculator[] = [
   { title: "Inflation", href: "/calculators/inflation", description: "Impact of inflation on wealth", category: "Planning", keywords: ["inflation", "purchasing power", "price rise", "cost"] },
   { title: "GST Calculator", href: "/calculators/gst", description: "Goods and Service Tax calculator", category: "Planning", keywords: ["gst", "tax", "invoice", "indirect tax"] },
   
+  // Tools
+  { title: "Document OCR", href: "/tools/ocr", description: "Extract text from receipts and documents", category: "Tools", keywords: ["ocr", "scan", "extract", "receipt", "document", "text"] },
+
   // Savings
   { title: "Simple Interest", href: "/calculators/simple-interest", description: "Standard interest calculator", category: "Savings", keywords: ["interest", "simple", "principal", "returns"] },
   { title: "Compound Interest", href: "/calculators/compound-interest", description: "Power of compounding tool", category: "Savings", keywords: ["compound", "interest", "wealth", "growth"] },
