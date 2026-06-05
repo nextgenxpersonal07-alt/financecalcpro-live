@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { ALL_CALCULATORS } from '@/lib/calculators';
+import { BLOG_POSTS } from '@/lib/blog-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://financecalcpro-live.vercel.app';
@@ -33,6 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Individual blog posts
+  const blogPages = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
   // Investment sub-pages
   const investmentPages = [
     '/investments/mutual-funds',
@@ -46,5 +55,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...calculatorPages, ...investmentPages];
+  return [...staticPages, ...calculatorPages, ...blogPages, ...investmentPages];
 }

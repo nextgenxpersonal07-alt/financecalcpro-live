@@ -1,5 +1,4 @@
-
-import { BLOG_POSTS, BlogPost } from "@/lib/blog-data";
+import { BLOG_POSTS } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,11 +23,17 @@ export async function generateMetadata({ params }: PageProps) {
   if (!post) return {};
 
   return {
-    title: `${post.title} | FinanceCalc Pro Blog`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
       images: [`https://picsum.photos/seed/${post.image}/1200/630`],
     },
   };
@@ -57,7 +62,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       "name": "FinanceCalc Pro",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://financecalc.pro/logo.png"
+        "url": "https://financecalcpro-live.vercel.app/logo.png"
       }
     }
   };
@@ -87,7 +92,6 @@ export default async function BlogPostPage({ params }: PageProps) {
       />
       
       <article className="max-w-4xl mx-auto space-y-12">
-        {/* Header Section */}
         <header className="space-y-6">
           <Badge className="rounded-full px-4 py-1">{post.category}</Badge>
           <h1 className="text-3xl lg:text-5xl font-bold font-headline leading-tight">
@@ -109,7 +113,6 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </header>
 
-        {/* Featured Image */}
         <div className="aspect-video relative rounded-[2.5rem] overflow-hidden shadow-2xl border">
           <Image
             src={`https://picsum.photos/seed/${post.image}/1200/675`}
@@ -120,9 +123,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           />
         </div>
 
-        {/* Content Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Table of Contents Sidebar */}
           <aside className="hidden lg:block lg:col-span-3 space-y-6 sticky top-24 h-fit">
             <h4 className="font-bold text-sm uppercase tracking-wider text-primary">In this article</h4>
             <nav className="flex flex-col gap-4 text-sm">
@@ -137,17 +138,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               ))}
               <a href="#faqs" className="text-muted-foreground hover:text-primary transition-colors border-l-2 border-transparent hover:border-primary pl-3">FAQs</a>
             </nav>
-            <div className="pt-6 border-t space-y-4">
-              <p className="text-xs font-bold text-muted-foreground">SHARE INSIGHTS</p>
-              <div className="flex gap-2">
-                <Button size="icon" variant="outline" className="rounded-full w-8 h-8"><Twitter className="w-4 h-4" /></Button>
-                <Button size="icon" variant="outline" className="rounded-full w-8 h-8"><Facebook className="w-4 h-4" /></Button>
-                <Button size="icon" variant="outline" className="rounded-full w-8 h-8"><Linkedin className="w-4 h-4" /></Button>
-              </div>
-            </div>
           </aside>
 
-          {/* Main Article Body */}
           <div className="lg:col-span-9 space-y-12">
             <div className="prose prose-neutral dark:prose-invert max-w-none">
               {post.content.sections.map((section) => (
@@ -158,7 +150,6 @@ export default async function BlogPostPage({ params }: PageProps) {
               ))}
             </div>
 
-            {/* FAQ Section */}
             <section id="faqs" className="bg-muted/30 rounded-3xl p-8 space-y-6 scroll-mt-24">
               <h3 className="text-2xl font-bold">Frequently Asked Questions</h3>
               <div className="space-y-6">
@@ -175,7 +166,6 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             </section>
 
-            {/* CTA Section */}
             <Card className="bg-primary text-primary-foreground border-none overflow-hidden relative group">
               <CardContent className="p-8 space-y-4 relative z-10">
                 <h3 className="text-2xl font-bold">Plan your goals with precision</h3>
@@ -193,7 +183,6 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Related Articles Section */}
         <section className="pt-16 border-t space-y-8">
           <h3 className="text-2xl font-bold">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
