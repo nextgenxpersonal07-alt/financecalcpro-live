@@ -19,12 +19,12 @@ import Image from "next/image";
 
 export default function Home() {
   const popularCalculators = [
-    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your monthly loan installments instantly with FinanceCalc Pro." },
-    { title: "SIP Calculator", icon: TrendingUp, href: "/calculators/sip", desc: "Estimate mutual fund returns for your goals using FinanceCalc Pro tools." },
-    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Calculate returns for Fixed Deposits maturity accurately." },
-    { title: "RD Calculator", icon: Calculator, href: "/calculators/rd", desc: "Plan your Recurring Deposit savings with FinanceCalc Pro." },
-    { title: "GST Calculator", icon: Receipt, href: "/calculators/gst", desc: "Quick Goods and Service Tax estimation for business." },
-    { title: "Income Tax Calculator", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your annual tax savings and liability with precision." },
+    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your monthly loan installments instantly with the FinanceCalc Pro EMI Calculator." },
+    { title: "SIP Calculator", icon: TrendingUp, href: "/calculators/sip", desc: "Estimate mutual fund returns and calculate SIP growth online using FinanceCalc Pro tools." },
+    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Accurate online finance calculator for Fixed Deposits and safe savings growth." },
+    { title: "RD Calculator", icon: Calculator, href: "/calculators/rd", desc: "Plan your recurring savings with our professional-grade financial planning tool." },
+    { title: "GST Calculator", icon: Receipt, href: "/calculators/gst", desc: "Fast Goods and Service Tax estimation for business owners and freelancers." },
+    { title: "Income Tax Calculator", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your annual tax savings and calculate liability under new and old regimes." },
   ];
 
   return (
@@ -35,28 +35,28 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
             <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-center lg:text-left">
               <Badge className="bg-primary/20 text-primary border-primary/20 hover:bg-primary/20 px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm">
-                #1 Financial Portal
+                Best Free Online Finance Calculator
               </Badge>
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-headline font-bold leading-[1.1]">
-                Master Your Money with <span className="text-primary">FinanceCalc Pro</span>
+                Smart Financial Planning with <span className="text-primary">FinanceCalc Pro</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                FinanceCalc Pro offers advanced calculators, AI-powered insights, and professional planning tools to help you achieve your financial freedom with precision.
+                FinanceCalc Pro offers the ultimate suite of free online investment calculators and wealth management tools to help you master your money with precision.
               </p>
               <div className="flex justify-center lg:justify-start pt-2">
                 <Button size="lg" className="rounded-full px-10 text-lg font-semibold w-full sm:w-auto h-14 shadow-xl shadow-primary/20 transition-transform hover:scale-105 active:scale-95" asChild>
-                  <Link href="/calculators">Start Calculating <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                  <Link href="/calculators">Explore All Tools <ArrowRight className="ml-2 w-5 h-5" /></Link>
                 </Button>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 text-xs sm:text-sm text-muted-foreground">
-                <p className="font-medium">Trusted by 50,000+ users monthly on FinanceCalc Pro</p>
+                <p className="font-medium">Trusted by 50,000+ users for accurate EMI calculation and financial planning.</p>
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative px-4 lg:px-0">
               <div className="relative z-10 bg-card border rounded-3xl p-3 sm:p-4 shadow-2xl glass mx-auto max-w-lg lg:max-w-none">
                 <Image
                   src="https://picsum.photos/seed/finance-dashboard/800/600"
-                  alt="FinanceCalc Pro Dashboard"
+                  alt="FinanceCalc Pro Financial Dashboard"
                   width={800}
                   height={600}
                   className="rounded-2xl w-full h-auto"
@@ -75,8 +75,8 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 sm:mb-12 gap-4 text-center md:text-left">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-headline font-bold text-foreground">Popular FinanceCalc Pro Tools</h2>
-            <p className="text-sm sm:text-base text-muted-foreground">Simple, fast and accurate calculators for every financial need.</p>
+            <h2 className="text-2xl sm:text-3xl font-headline font-bold text-foreground">Pro-Grade Investment Calculators</h2>
+            <p className="text-sm sm:text-base text-muted-foreground">The most accurate financial planning tools, including SIP and loan EMI calculators.</p>
           </div>
           <Button variant="ghost" asChild className="group hidden sm:flex">
             <Link href="/calculators">
@@ -110,11 +110,6 @@ export default function Home() {
             );
           })}
         </div>
-        <div className="mt-8 sm:hidden">
-          <Button variant="outline" asChild className="w-full h-12 rounded-full font-bold">
-            <Link href="/calculators">View All 20+ Tools</Link>
-          </Button>
-        </div>
       </section>
 
       {/* About FinanceCalc Pro Section */}
@@ -122,10 +117,10 @@ export default function Home() {
         <div className="bg-muted/30 border rounded-[3rem] p-8 lg:p-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <Badge variant="outline" className="border-primary/30 text-primary">About Us</Badge>
-              <h2 className="text-3xl lg:text-5xl font-headline font-bold">The FinanceCalc Pro Difference</h2>
+              <Badge variant="outline" className="border-primary/30 text-primary">About FinanceCalc Pro</Badge>
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold">Why Use FinanceCalc Pro?</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                FinanceCalc Pro is committed to making complex financial planning accessible for everyone. Our platform combines professional-grade financial algorithms with the latest AI technology to provide you with insights that matter.
+                FinanceCalc Pro is a leading online finance calculator platform designed to simplify complex wealth management. Whether you need to calculate SIP returns online or find the right loan EMI, our tools provide bank-grade accuracy.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                 <div className="flex items-start gap-3">
@@ -134,7 +129,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold">Accurate Results</h4>
-                    <p className="text-sm text-muted-foreground">Professional algorithms ensure precise numbers.</p>
+                    <p className="text-sm text-muted-foreground">The best free financial calculator with professional algorithms.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -143,7 +138,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold">Goal Oriented</h4>
-                    <p className="text-sm text-muted-foreground">Tools designed to help you reach your targets.</p>
+                    <p className="text-sm text-muted-foreground">Personal finance planning tools tailored for your success.</p>
                   </div>
                 </div>
               </div>
@@ -151,7 +146,7 @@ export default function Home() {
             <div className="relative aspect-square lg:aspect-video rounded-3xl overflow-hidden shadow-2xl">
               <Image 
                 src="https://picsum.photos/seed/about-brand/800/600" 
-                alt="About FinanceCalc Pro" 
+                alt="Wealth Growth with FinanceCalc Pro" 
                 fill 
                 className="object-cover"
                 data-ai-hint="finance growth"
@@ -166,68 +161,16 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              AI Powered Insights
+              AI Powered Strategy
             </div>
-            <h2 className="text-3xl sm:text-5xl font-headline font-bold leading-tight">Intelligent Planning by FinanceCalc Pro</h2>
+            <h2 className="text-3xl sm:text-5xl font-headline font-bold leading-tight">Professional Wealth Management Tools</h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-2">
-              Our FinanceCalc Pro AI doesn't just calculate numbers. It analyzes your goals, income, and liabilities to generate a personalized wealth strategy tailored for your success.
+              Our FinanceCalc Pro AI goes beyond standard calculations. It acts as your online investment calculator assistant, generating personalized wealth strategies based on current market trends.
             </p>
             <Button size="lg" className="rounded-full px-8 sm:px-12 h-14 text-lg w-full sm:w-auto shadow-lg shadow-primary/20">
-              Get Your AI Strategy
+              Get Your Free AI Strategy
             </Button>
           </div>
-        </div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square bg-primary rounded-full blur-[120px]" />
-        </div>
-      </section>
-
-      {/* Blog Teaser */}
-      <section className="container mx-auto px-4 mb-16">
-        <div className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 sm:mb-12 gap-4 text-center md:text-left">
-          <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-headline font-bold">Latest FinanceCalc Pro Insights</h2>
-            <p className="text-sm sm:text-base text-muted-foreground">Master personal finance with our expert articles.</p>
-          </div>
-          <Button variant="ghost" asChild className="group hidden sm:flex">
-            <Link href="/blog">
-              Read Blog <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { tag: "Investing", title: "SIP vs Lump Sum: Which is better for high returns?", img: "blog-investing" },
-            { tag: "Tax", title: "Tax Planning 101: How to maximize your savings this year", img: "blog-tax" },
-            { tag: "Retirement", title: "The 4% Rule: How much do you really need to retire?", img: "blog-retirement" },
-          ].map((post, i) => (
-            <Card key={i} className="group border-none shadow-none bg-transparent hover:translate-y-[-4px] transition-transform duration-300 active:scale-[0.98]">
-              <CardContent className="p-0 space-y-4">
-                <div className="aspect-[16/10] sm:aspect-[4/3] rounded-3xl overflow-hidden relative shadow-sm">
-                  <Image
-                    src={`https://picsum.photos/seed/${post.img}/800/600`}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-background/80 backdrop-blur-sm text-foreground border-none">
-                      {post.tag}
-                    </Badge>
-                  </div>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold font-headline leading-snug group-hover:text-primary transition-colors cursor-pointer line-clamp-2">
-                  {post.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">5 min read • Feb 24, 2024</p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </section>
     </div>

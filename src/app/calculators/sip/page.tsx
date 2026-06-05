@@ -2,13 +2,21 @@ import { CalculatorContainer } from "@/components/calculators/calculator-contain
 import { SIPCalculator } from "@/components/calculators/sip-calculator";
 import { AIInsights } from "@/components/ai/ai-insights";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { TrendingUp, Info, FileText } from "lucide-react";
+import { Info, FileText } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "SIP Calculator | Mutual Fund Returns & Wealth Growth Planner",
-  description: "Calculate future wealth for your Systematic Investment Plan (SIP) in mutual funds. Plan your goals with the best SIP growth projection tool.",
+  title: "SIP Calculator | FinanceCalc Pro Investment & Wealth Planner",
+  description: "Calculate SIP returns online and project future wealth with the FinanceCalc Pro SIP Calculator. The best free online investment calculator for mutual funds.",
+  keywords: [
+    'sip calculator',
+    'calculate sip returns online',
+    'FinanceCalc Pro SIP Calculator',
+    'investment calculator',
+    'wealth management calculator'
+  ],
   alternates: {
     canonical: "/calculators/sip",
   },
@@ -18,16 +26,16 @@ export default function SIPPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "SIP Calculator",
+    "name": "FinanceCalc Pro SIP Calculator",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
-    "description": "Calculate Systematic Investment Plan returns for mutual funds."
+    "description": "Calculate Systematic Investment Plan returns and wealth growth projections for long-term financial independence."
   };
 
   return (
     <CalculatorContainer
       title="SIP Calculator"
-      description="Calculate future wealth for your Systematic Investment Plan (SIP) in mutual funds. Plan your goals with precision."
+      description="The FinanceCalc Pro SIP Calculator helps you calculate SIP returns online. Plan your long-term goals with the best free online investment calculator."
       sidebar={
         <div className="space-y-6">
           <script
@@ -38,11 +46,11 @@ export default function SIPPage() {
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <Info className="w-4 h-4 text-primary" />
-                Power of SIP
+                Smart SIP Planning
               </CardTitle>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
-              A Systematic Investment Plan allows you to invest small amounts periodically. The primary benefit is the power of compounding and rupee cost averaging.
+              A Systematic Investment Plan is the most effective personal finance planning tool for compounding wealth over 10 to 20 years.
             </CardContent>
           </Card>
 
@@ -50,12 +58,12 @@ export default function SIPPage() {
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <FileText className="w-4 h-4 text-primary" />
-                Investment Guide
+                Wealth Creation Guide
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-xs text-muted-foreground">
-                New to investing? Learn how SIPs can help you achieve financial independence.
+                Unlock the power of our FinanceCalc Pro SIP Calculator and reach your goals faster.
               </p>
               <Link href="/blog/what-is-sip-and-how-it-works-india">
                 <Button variant="outline" size="sm" className="w-full text-xs font-bold mt-2">
@@ -66,8 +74,8 @@ export default function SIPPage() {
           </Card>
           
           <AIInsights 
-            context="SIP of ₹10,000 monthly for 10 years at 12% returns"
-            goals="Retire early and achieve financial independence."
+            context="SIP growth projection for long-term wealth"
+            goals="Achieve financial independence through disciplined monthly investing."
           />
         </div>
       }
@@ -76,5 +84,3 @@ export default function SIPPage() {
     </CalculatorContainer>
   );
 }
-
-import { Button } from "@/components/ui/button";

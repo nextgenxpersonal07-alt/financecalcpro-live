@@ -5,10 +5,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Info, FileText } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "EMI Calculator | Home, Car & Personal Loan Installment Calculator",
-  description: "Calculate your monthly home, car or personal loan installments (EMI) with our free tool. Includes detailed amortization schedules and interest breakdown.",
+  title: "EMI Calculator | FinanceCalc Pro Loan Installment Calculator",
+  description: "Calculate your monthly loan installments with the FinanceCalc Pro EMI Calculator. The best free online loan EMI calculator online for home, car, and personal loans.",
+  keywords: [
+    'emi calculator',
+    'loan emi calculator online',
+    'emi calculation tool',
+    'FinanceCalc Pro EMI Calculator',
+    'monthly installment calculator'
+  ],
   alternates: {
     canonical: "/calculators/emi",
   },
@@ -18,16 +26,16 @@ export default function EMIPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "EMI Calculator",
+    "name": "FinanceCalc Pro EMI Calculator",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
-    "description": "Calculate loan EMIs with instant results and amortization schedules."
+    "description": "Calculate loan EMIs with instant results and detailed amortization schedules using our professional tool."
   };
 
   return (
     <CalculatorContainer
       title="EMI Calculator"
-      description="Calculate your monthly home, car or personal loan installments with instant amortization schedules and visual breakdown."
+      description="The FinanceCalc Pro EMI Calculator is your go-to tool for loan planning. Use our loan emi calculator online to estimate monthly payments and interest costs."
       sidebar={
         <div className="space-y-6">
           <script
@@ -38,11 +46,11 @@ export default function EMIPage() {
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <Info className="w-4 h-4 text-primary" />
-                What is EMI?
+                EMI Calculation Tips
               </CardTitle>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
-              EMI stands for Equated Monthly Installment. It is a fixed payment amount made by a borrower to a lender at a specified date each calendar month.
+              Understanding your EMI helps in effective debt management. Use this tool as a comprehensive financial planning calculator for all your loan needs.
             </CardContent>
           </Card>
 
@@ -50,24 +58,24 @@ export default function EMIPage() {
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
                 <FileText className="w-4 h-4 text-primary" />
-                Learning Guide
+                EMI Guide
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-xs text-muted-foreground">
-                Understand the math behind loan repayments and how to save on interest.
+                Learn the math behind our FinanceCalc Pro EMI Calculator and discover how to save on total interest.
               </p>
               <Link href="/blog/emi-calculation-guide">
                 <Button variant="outline" size="sm" className="w-full text-xs font-bold mt-2">
-                  Read EMI Guide
+                  Read Full Guide
                 </Button>
               </Link>
             </CardContent>
           </Card>
           
           <AIInsights 
-            context="EMI Calculation for ₹10L Loan at 8.5%"
-            goals="Minimize interest outflow and plan for pre-payment."
+            context="EMI Calculation for Loan planning"
+            goals="Minimize interest outflow and plan for faster loan repayment."
           />
         </div>
       }
@@ -76,5 +84,3 @@ export default function EMIPage() {
     </CalculatorContainer>
   );
 }
-
-import { Button } from "@/components/ui/button";

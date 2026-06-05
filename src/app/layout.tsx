@@ -13,17 +13,31 @@ export const metadata: Metadata = {
     default: 'FinanceCalc Pro | Free Financial Calculators & Investment Tools',
     template: '%s | FinanceCalc Pro',
   },
-  description: 'FinanceCalc Pro is the ultimate portal for loan calculations, investment planning, and tax estimations. Get accurate results and personalized financial insights with FinanceCalc Pro.',
+  description: 'FinanceCalc Pro is the ultimate portal for loan calculations, investment planning, and tax estimations. Access our free online finance calculator suite including SIP, EMI, and GST tools today.',
   keywords: [
     'FinanceCalc Pro', 
     'FinanceCalc Pro Calculator', 
     'FinanceCalc Pro Finance Tools', 
-    'FinanceCalc Pro Investment Calculators',
+    'FinanceCalc Pro Investment Tools',
+    'FinanceCalc Pro EMI Calculator',
+    'FinanceCalc Pro SIP Calculator',
+    'finance calculator', 
     'financial calculator', 
-    'emi calculator', 
-    'sip calculator', 
-    'tax calculator', 
-    'investment planning'
+    'online finance calculator',
+    'investment calculator',
+    'sip calculator',
+    'emi calculator',
+    'loan calculator',
+    'fd calculator',
+    'gst calculator',
+    'tax calculator',
+    'compound interest calculator',
+    'best free financial calculator',
+    'free online investment calculator',
+    'calculate sip returns online',
+    'personal finance planning tools',
+    'wealth management calculator',
+    'loan emi calculator online'
   ],
   authors: [{ name: 'FinanceCalc Pro Team' }],
   creator: 'FinanceCalc Pro',
@@ -41,8 +55,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://financecalcpro-live.vercel.app',
     siteName: 'FinanceCalc Pro',
-    title: 'FinanceCalc Pro | Professional Financial Tools',
-    description: 'Master your money with FinanceCalc Pro. Professional-grade calculators and AI-powered wealth strategies.',
+    title: 'FinanceCalc Pro | Professional Online Finance Calculators',
+    description: 'Master your money with FinanceCalc Pro. The best free financial planning and investment tools for long-term wealth management.',
     images: [
       {
         url: 'https://picsum.photos/seed/finance-og/1200/630',
@@ -54,8 +68,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FinanceCalc Pro | Financial Tools',
-    description: 'Plan your financial future with FinanceCalc Pro - your suite of accurate calculators.',
+    title: 'FinanceCalc Pro | Online Finance Tools',
+    description: 'Accurate loan EMI, SIP, and tax calculators for everyone. Start planning your financial future with FinanceCalc Pro.',
     images: ['https://picsum.photos/seed/finance-og/1200/630'],
   },
   verification: {
@@ -89,6 +103,7 @@ export default function RootLayout({
     "name": "FinanceCalc Pro",
     "url": "https://financecalcpro-live.vercel.app",
     "logo": "https://financecalcpro-live.vercel.app/logo.png",
+    "description": "FinanceCalc Pro offers a complete suite of professional online finance calculators and investment tools.",
     "sameAs": [
       "https://twitter.com/financecalcpro",
       "https://linkedin.com/company/financecalcpro"
