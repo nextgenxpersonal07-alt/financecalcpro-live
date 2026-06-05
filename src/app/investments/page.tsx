@@ -8,10 +8,10 @@ import Image from "next/image";
 
 export default function InvestmentsPage() {
   const categories = [
-    { title: "Mutual Funds", icon: TrendingUp, count: "5,000+ Funds", desc: "Compare and analyze top performing mutual funds." },
-    { title: "Fixed Deposits", icon: Landmark, count: "All Major Banks", desc: "Safe and guaranteed returns for your savings." },
-    { title: "Stock Market", icon: BarChart4, count: "Real-time Data", desc: "Insights into equity and derivative markets." },
-    { title: "Retirement", icon: Target, count: "Goal Based", desc: "Plan your golden years with early precision." }
+    { title: "Mutual Funds", icon: TrendingUp, count: "5,000+ Funds", desc: "Compare and analyze top performing mutual funds.", href: "/investments/mutual-funds" },
+    { title: "Fixed Deposits", icon: Landmark, count: "All Major Banks", desc: "Safe and guaranteed returns for your savings.", href: "/investments/fixed-deposits" },
+    { title: "Stock Market", icon: BarChart4, count: "Learning Center", desc: "Insights into equity and derivative markets.", href: "/investments/stock-market" },
+    { title: "Retirement", icon: Target, count: "Goal Based", desc: "Plan your golden years with early precision.", href: "/investments/retirement-planning" }
   ];
 
   const tools = [
@@ -31,16 +31,18 @@ export default function InvestmentsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {categories.map((cat, i) => (
-          <Card key={i} className="hover:border-primary/40 transition-all cursor-pointer group">
-            <CardHeader>
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <cat.icon className="w-6 h-6" />
-              </div>
-              <CardTitle className="text-xl">{cat.title}</CardTitle>
-              <Badge variant="secondary" className="w-fit mt-2">{cat.count}</Badge>
-              <CardDescription className="pt-2">{cat.desc}</CardDescription>
-            </CardHeader>
-          </Card>
+          <Link key={i} href={cat.href}>
+            <Card className="hover:border-primary/40 transition-all cursor-pointer group h-full">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <cat.icon className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-xl">{cat.title}</CardTitle>
+                <Badge variant="secondary" className="w-fit mt-2">{cat.count}</Badge>
+                <CardDescription className="pt-2">{cat.desc}</CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
         ))}
       </div>
 
@@ -82,7 +84,9 @@ export default function InvestmentsPage() {
                 <p className="text-2xl font-bold">₹1.5 Crores</p>
               </div>
             </div>
-            <Button variant="secondary" className="w-full font-bold">Start Planning</Button>
+            <Link href="/calculators/savings-goal">
+              <Button variant="secondary" className="w-full font-bold">Start Planning</Button>
+            </Link>
           </CardContent>
         </Card>
       </div>
