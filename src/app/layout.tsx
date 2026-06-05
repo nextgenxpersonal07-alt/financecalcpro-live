@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { Navbar } from '@/components/navigation/navbar';
 import { MobileNav } from '@/components/navigation/mobile-nav';
@@ -43,6 +44,12 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Script 
+          src="https://quge5.com/88/tag.min.js" 
+          data-zone="246495" 
+          strategy="afterInteractive"
+          data-cfasync="false"
         />
       </head>
       <body className="font-body antialiased min-h-screen flex flex-col">
