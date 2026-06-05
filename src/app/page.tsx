@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   ChevronRight,
   ArrowRight,
-  Play,
   Receipt,
   Briefcase
 } from "lucide-react";
@@ -41,12 +40,9 @@ export default function Home() {
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Advanced calculators, AI-powered insights, and professional planning tools to help you achieve your financial freedom.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                <Button size="lg" className="rounded-full px-8 text-lg font-semibold w-full sm:w-auto h-12 sm:h-14" asChild>
+              <div className="flex justify-center lg:justify-start pt-2">
+                <Button size="lg" className="rounded-full px-10 text-lg font-semibold w-full sm:w-auto h-14 shadow-xl shadow-primary/20 transition-transform hover:scale-105 active:scale-95" asChild>
                   <Link href="/calculators">Start Calculating <ArrowRight className="ml-2 w-5 h-5" /></Link>
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 text-lg font-semibold w-full sm:w-auto h-12 sm:h-14">
-                  <Play className="mr-2 w-5 h-5 fill-current" /> Watch Demo
                 </Button>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 text-xs sm:text-sm text-muted-foreground">
