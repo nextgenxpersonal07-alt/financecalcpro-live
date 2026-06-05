@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { ALL_CALCULATORS } from '@/lib/calculators';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://financecalc.pro';
+  const baseUrl = 'https://financecalcpro-live.vercel.app';
 
   // Base pages
   const staticPages = [
