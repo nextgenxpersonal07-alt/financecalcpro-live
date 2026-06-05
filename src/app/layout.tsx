@@ -71,6 +71,8 @@ export const metadata: Metadata = {
     title: 'FinanceCalc Pro | Online Finance Tools',
     description: 'Accurate loan EMI, SIP, and tax calculators for everyone. Start planning your financial future with FinanceCalc Pro.',
     images: ['https://picsum.photos/seed/finance-og/1200/630'],
+    site: '@financecalcpro',
+    creator: '@financecalcpro',
   },
   verification: {
     google: 'i-JprjrYos97SYakX0mU38D7foE9izCn0ODnPLLUtK8',
@@ -85,10 +87,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "FinanceCalc Pro",
+    "alternateName": "FinanceCalc Pro Financial Calculators",
     "url": "https://financecalcpro-live.vercel.app",
     "potentialAction": {
       "@type": "SearchAction",
@@ -97,7 +100,7 @@ export default function RootLayout({
     }
   };
 
-  const orgJsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "FinanceCalc Pro",
@@ -106,7 +109,8 @@ export default function RootLayout({
     "description": "FinanceCalc Pro offers a complete suite of professional online finance calculators and investment tools.",
     "sameAs": [
       "https://twitter.com/financecalcpro",
-      "https://linkedin.com/company/financecalcpro"
+      "https://linkedin.com/company/financecalcpro",
+      "https://facebook.com/financecalcpro"
     ]
   };
 
@@ -118,11 +122,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         <Script 
           src="https://quge5.com/88/tag.min.js" 
