@@ -1,4 +1,3 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { Navbar } from '@/components/navigation/navbar';
@@ -10,6 +9,9 @@ import { PageHeader } from '@/components/navigation/page-header';
 export const metadata: Metadata = {
   title: 'FinanceCalc Pro | Premium Financial Calculators',
   description: 'The ultimate portal for loan calculations, investment planning, tax estimations, and personalized financial strategies.',
+  verification: {
+    google: 'i-JprjrYos97SYakX0mU38D7foE9izCn0ODnPLLUtK8',
+  },
 };
 
 export default function RootLayout({
