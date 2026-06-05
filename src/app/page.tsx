@@ -9,19 +9,22 @@ import {
   ChevronRight,
   ArrowRight,
   Receipt,
-  Briefcase
+  Briefcase,
+  Target,
+  Users,
+  Award
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   const popularCalculators = [
-    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your monthly loan installments instantly" },
-    { title: "SIP Calculator", icon: TrendingUp, href: "/calculators/sip", desc: "Estimate mutual fund returns for your goals" },
-    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Calculate returns for Fixed Deposits maturity" },
-    { title: "RD Calculator", icon: Calculator, href: "/calculators/rd", desc: "Plan your Recurring Deposit savings" },
-    { title: "GST Calculator", icon: Receipt, href: "/calculators/gst", desc: "Quick Goods and Service Tax estimation" },
-    { title: "Income Tax Calculator", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your annual tax savings and liability" },
+    { title: "EMI Calculator", icon: Landmark, href: "/calculators/emi", desc: "Calculate your monthly loan installments instantly with FinanceCalc Pro." },
+    { title: "SIP Calculator", icon: TrendingUp, href: "/calculators/sip", desc: "Estimate mutual fund returns for your goals using FinanceCalc Pro tools." },
+    { title: "FD Calculator", icon: Briefcase, href: "/calculators/fd", desc: "Calculate returns for Fixed Deposits maturity accurately." },
+    { title: "RD Calculator", icon: Calculator, href: "/calculators/rd", desc: "Plan your Recurring Deposit savings with FinanceCalc Pro." },
+    { title: "GST Calculator", icon: Receipt, href: "/calculators/gst", desc: "Quick Goods and Service Tax estimation for business." },
+    { title: "Income Tax Calculator", icon: ShieldCheck, href: "/calculators/tax", desc: "Plan your annual tax savings and liability with precision." },
   ];
 
   return (
@@ -35,10 +38,10 @@ export default function Home() {
                 #1 Financial Portal
               </Badge>
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-headline font-bold leading-[1.1]">
-                Master Your Money with <span className="text-primary">Precision</span>
+                Master Your Money with <span className="text-primary">FinanceCalc Pro</span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Advanced calculators, AI-powered insights, and professional planning tools to help you achieve your financial freedom.
+                FinanceCalc Pro offers advanced calculators, AI-powered insights, and professional planning tools to help you achieve your financial freedom with precision.
               </p>
               <div className="flex justify-center lg:justify-start pt-2">
                 <Button size="lg" className="rounded-full px-10 text-lg font-semibold w-full sm:w-auto h-14 shadow-xl shadow-primary/20 transition-transform hover:scale-105 active:scale-95" asChild>
@@ -46,14 +49,14 @@ export default function Home() {
                 </Button>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 text-xs sm:text-sm text-muted-foreground">
-                <p className="font-medium">Trusted by 50,000+ users monthly</p>
+                <p className="font-medium">Trusted by 50,000+ users monthly on FinanceCalc Pro</p>
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative px-4 lg:px-0">
               <div className="relative z-10 bg-card border rounded-3xl p-3 sm:p-4 shadow-2xl glass mx-auto max-w-lg lg:max-w-none">
                 <Image
                   src="https://picsum.photos/seed/finance-dashboard/800/600"
-                  alt="Finance Dashboard"
+                  alt="FinanceCalc Pro Dashboard"
                   width={800}
                   height={600}
                   className="rounded-2xl w-full h-auto"
@@ -72,8 +75,8 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 sm:mb-12 gap-4 text-center md:text-left">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-headline font-bold">Popular Calculators</h2>
-            <p className="text-sm sm:text-base text-muted-foreground">Simple, fast and accurate tools for every financial need.</p>
+            <h2 className="text-2xl sm:text-3xl font-headline font-bold text-foreground">Popular FinanceCalc Pro Tools</h2>
+            <p className="text-sm sm:text-base text-muted-foreground">Simple, fast and accurate calculators for every financial need.</p>
           </div>
           <Button variant="ghost" asChild className="group hidden sm:flex">
             <Link href="/calculators">
@@ -114,8 +117,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About FinanceCalc Pro Section */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="bg-muted/30 border rounded-[3rem] p-8 lg:p-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <Badge variant="outline" className="border-primary/30 text-primary">About Us</Badge>
+              <h2 className="text-3xl lg:text-5xl font-headline font-bold">The FinanceCalc Pro Difference</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                FinanceCalc Pro is committed to making complex financial planning accessible for everyone. Our platform combines professional-grade financial algorithms with the latest AI technology to provide you with insights that matter.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 bg-primary/10 p-2 rounded-lg">
+                    <Award className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Accurate Results</h4>
+                    <p className="text-sm text-muted-foreground">Professional algorithms ensure precise numbers.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 bg-primary/10 p-2 rounded-lg">
+                    <Target className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Goal Oriented</h4>
+                    <p className="text-sm text-muted-foreground">Tools designed to help you reach your targets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative aspect-square lg:aspect-video rounded-3xl overflow-hidden shadow-2xl">
+              <Image 
+                src="https://picsum.photos/seed/about-brand/800/600" 
+                alt="About FinanceCalc Pro" 
+                fill 
+                className="object-cover"
+                data-ai-hint="finance growth"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Intelligent AI Feature */}
-      <section className="bg-card py-16 sm:py-24 relative overflow-hidden">
+      <section className="bg-card py-16 sm:py-24 relative overflow-hidden border-y">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] sm:text-xs font-bold uppercase tracking-wider">
@@ -125,9 +172,9 @@ export default function Home() {
               </span>
               AI Powered Insights
             </div>
-            <h2 className="text-3xl sm:text-5xl font-headline font-bold leading-tight">Intelligent Financial Planning</h2>
+            <h2 className="text-3xl sm:text-5xl font-headline font-bold leading-tight">Intelligent Planning by FinanceCalc Pro</h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-2">
-              Our FinanceCalc Pro AI doesn't just calculate numbers. It analyzes your goals, income, and liabilities to generate a personalized wealth strategy.
+              Our FinanceCalc Pro AI doesn't just calculate numbers. It analyzes your goals, income, and liabilities to generate a personalized wealth strategy tailored for your success.
             </p>
             <Button size="lg" className="rounded-full px-8 sm:px-12 h-14 text-lg w-full sm:w-auto shadow-lg shadow-primary/20">
               Get Your AI Strategy
@@ -143,7 +190,7 @@ export default function Home() {
       <section className="container mx-auto px-4 mb-16">
         <div className="flex flex-col md:flex-row items-center md:items-end justify-between mb-8 sm:mb-12 gap-4 text-center md:text-left">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-headline font-bold">Latest Insights</h2>
+            <h2 className="text-2xl sm:text-3xl font-headline font-bold">Latest FinanceCalc Pro Insights</h2>
             <p className="text-sm sm:text-base text-muted-foreground">Master personal finance with our expert articles.</p>
           </div>
           <Button variant="ghost" asChild className="group hidden sm:flex">

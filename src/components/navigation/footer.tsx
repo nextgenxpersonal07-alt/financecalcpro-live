@@ -23,7 +23,7 @@ export function Footer() {
               <span className="font-headline font-bold text-xl">FinanceCalc Pro</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Your trusted partner for professional-grade financial planning and calculations. Empowering your financial future with data-driven AI insights.
+              FinanceCalc Pro is your trusted partner for professional-grade financial planning and calculations. Empowering your financial future with data-driven AI insights and best-in-class investment tools.
             </p>
             <div className="flex items-center gap-4">
               <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
@@ -35,20 +35,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Popular Calculators</h4>
+            <h4 className="font-bold mb-6">FinanceCalc Pro Tools</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/calculators/emi" className="hover:text-primary transition-colors">EMI Calculator</Link></li>
               <li><Link href="/calculators/sip" className="hover:text-primary transition-colors">SIP Calculator</Link></li>
               <li><Link href="/calculators/fd" className="hover:text-primary transition-colors">Fixed Deposit (FD)</Link></li>
               <li><Link href="/calculators/tax" className="hover:text-primary transition-colors">Income Tax</Link></li>
-              <li><Link href="/calculators" className="hover:text-primary transition-colors">View All Tools</Link></li>
+              <li><Link href="/calculators" className="hover:text-primary transition-colors">View All FinanceCalc Pro Tools</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-6">Company & Support</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About FinanceCalc Pro</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
               <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
@@ -57,8 +57,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6">Weekly Insights</h4>
-            <p className="text-sm text-muted-foreground mb-4">Subscribe to get the latest financial strategies and market trends.</p>
+            <h4 className="font-bold mb-6">Weekly Finance Insights</h4>
+            <p className="text-sm text-muted-foreground mb-4">Subscribe to get the latest financial strategies from FinanceCalc Pro experts.</p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t text-center text-sm text-muted-foreground">
-          © {year || '...'} FinanceCalc Pro. All rights reserved. Professional financial calculations at your fingertips.
+          © {year || '...'} FinanceCalc Pro. All rights reserved. Professional financial calculations by FinanceCalc Pro.
         </div>
       </div>
     </footer>

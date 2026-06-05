@@ -10,11 +10,21 @@ import { PageHeader } from '@/components/navigation/page-header';
 export const metadata: Metadata = {
   metadataBase: new URL('https://financecalcpro-live.vercel.app'),
   title: {
-    default: 'FinanceCalc Pro | Premium Financial Calculators & AI Insights',
+    default: 'FinanceCalc Pro | Free Financial Calculators & Investment Tools',
     template: '%s | FinanceCalc Pro',
   },
-  description: 'The ultimate portal for loan calculations, investment planning, tax estimations, and personalized financial strategies. Accurate, fast, and free.',
-  keywords: ['financial calculator', 'emi calculator', 'sip calculator', 'tax calculator', 'investment planning', 'finance portal', 'loan calculator'],
+  description: 'FinanceCalc Pro is the ultimate portal for loan calculations, investment planning, and tax estimations. Get accurate results and personalized financial insights with FinanceCalc Pro.',
+  keywords: [
+    'FinanceCalc Pro', 
+    'FinanceCalc Pro Calculator', 
+    'FinanceCalc Pro Finance Tools', 
+    'FinanceCalc Pro Investment Calculators',
+    'financial calculator', 
+    'emi calculator', 
+    'sip calculator', 
+    'tax calculator', 
+    'investment planning'
+  ],
   authors: [{ name: 'FinanceCalc Pro Team' }],
   creator: 'FinanceCalc Pro',
   publisher: 'FinanceCalc Pro',
@@ -32,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://financecalcpro-live.vercel.app',
     siteName: 'FinanceCalc Pro',
     title: 'FinanceCalc Pro | Professional Financial Tools',
-    description: 'Master your money with professional-grade calculators and AI-powered wealth strategies.',
+    description: 'Master your money with FinanceCalc Pro. Professional-grade calculators and AI-powered wealth strategies.',
     images: [
       {
         url: 'https://picsum.photos/seed/finance-og/1200/630',
@@ -45,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FinanceCalc Pro | Financial Tools',
-    description: 'Plan your financial future with our suite of accurate calculators.',
+    description: 'Plan your financial future with FinanceCalc Pro - your suite of accurate calculators.',
     images: ['https://picsum.photos/seed/finance-og/1200/630'],
   },
   verification: {
