@@ -83,6 +83,7 @@ export function Navbar() {
           <Link href="/investments" className="hover:text-primary transition-colors">Investments</Link>
           <Link href="/loans" className="hover:text-primary transition-colors">Loans</Link>
           <Link href="/tax" className="hover:text-primary transition-colors">Tax</Link>
+          <Link href="/tools/ocr" className="hover:text-primary transition-colors">Tools</Link>
         </nav>
 
         <div className={`flex items-center gap-2 ${mobileSearchOpen ? 'flex-1' : 'ml-auto relative'}`} ref={searchRef}>
@@ -161,9 +162,11 @@ export function Navbar() {
               >
                 {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
-              <Button className="hidden md:flex rounded-full px-6 font-semibold shrink-0">
-                Join Pro
-              </Button>
+              <Link href="/calculators">
+                <Button className="hidden md:flex rounded-full px-6 font-semibold shrink-0">
+                  View Tools
+                </Button>
+              </Link>
             </>
           )}
         </div>

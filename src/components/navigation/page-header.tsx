@@ -11,7 +11,6 @@ const PATH_MAP: Record<string, string> = {
   "calculators": "Calculators",
   "investments": "Investments",
   "blog": "Blog",
-  "dashboard": "Profile",
   "about": "About Us",
   "contact": "Contact Us",
   "privacy": "Privacy Policy",

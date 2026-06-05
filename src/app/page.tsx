@@ -9,7 +9,8 @@ import {
   ChevronRight,
   ArrowRight,
   Play,
-  Receipt
+  Receipt,
+  Briefcase
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -49,20 +50,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 text-xs sm:text-sm text-muted-foreground">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-background overflow-hidden">
-                      <Image
-                        src={`https://picsum.photos/seed/user${i}/100/100`}
-                        alt="User"
-                        width={40}
-                        height={40}
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <span>Trusted by 50,000+ users monthly</span>
+                <p className="font-medium">Trusted by 50,000+ users monthly</p>
               </div>
             </div>
             <div className="w-full lg:w-1/2 relative px-4 lg:px-0">
@@ -202,5 +190,3 @@ export default function Home() {
     </div>
   );
 }
-
-import { Briefcase } from "lucide-react";

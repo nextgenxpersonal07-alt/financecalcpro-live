@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { Home, Calculator, TrendingUp, BookOpen, User } from "lucide-react";
+import { Home, Calculator, TrendingUp, BookOpen, ScanText } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
@@ -15,10 +15,10 @@ export function MobileNav() {
 
   const navItems = [
     { icon: Home, label: "Home", href: "/" },
-    { icon: Calculator, label: "Tools", href: "/calculators" },
+    { icon: Calculator, label: "Calculators", href: "/calculators" },
     { icon: TrendingUp, label: "Invest", href: "/investments" },
     { icon: BookOpen, label: "Blog", href: "/blog" },
-    { icon: User, label: "Profile", href: "/dashboard" },
+    { icon: ScanText, label: "Tools", href: "/tools/ocr" },
   ];
 
   if (!mounted) return null;
