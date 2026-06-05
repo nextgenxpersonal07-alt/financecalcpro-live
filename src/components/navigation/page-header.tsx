@@ -1,4 +1,3 @@
-
 "use client"
 
 import React from "react";
@@ -32,17 +31,13 @@ export function PageHeader() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Don't show on homepage
   if (pathname === "/") return null;
 
   const pathSegments = pathname.split("/").filter(Boolean);
 
   const getLabel = (segment: string) => {
-    // Check if it's a calculator slug
     const calculator = ALL_CALCULATORS.find(c => c.href.endsWith(segment));
     if (calculator) return calculator.title;
-
-    // Check path map
     return PATH_MAP[segment] || segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ");
   };
 
@@ -55,9 +50,8 @@ export function PageHeader() {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-6 pb-2 animate-in fade-in slide-in-from-top-2 duration-500">
+    <div className="container mx-auto pt-6 pb-2 animate-in fade-in slide-in-from-top-2 duration-500">
       <div className="flex flex-col gap-4">
-        {/* Universal Back Button */}
         <div className="flex items-center">
           <Button 
             variant="ghost" 
@@ -72,9 +66,8 @@ export function PageHeader() {
           </Button>
         </div>
 
-        {/* Breadcrumbs */}
-        <nav className="flex items-center space-x-1 text-xs font-medium text-muted-foreground">
-          <Link href="/" className="flex items-center hover:text-primary transition-colors">
+        <nav className="flex items-center space-x-1 text-xs font-medium text-muted-foreground overflow-x-auto whitespace-nowrap pb-2 scrollbar-hide">
+          <Link href="/" className="flex items-center hover:text-primary transition-colors shrink-0">
             <Home className="w-3 h-3 mr-1" />
             Home
           </Link>
@@ -86,11 +79,11 @@ export function PageHeader() {
 
             return (
               <React.Fragment key={href}>
-                <ChevronRight className="w-3 h-3 opacity-50" />
+                <ChevronRight className="w-3 h-3 opacity-50 shrink-0" />
                 {isLast ? (
-                  <span className="text-primary font-bold">{label}</span>
+                  <span className="text-primary font-bold truncate max-w-[150px]">{label}</span>
                 ) : (
-                  <Link href={href} className="hover:text-primary transition-colors">
+                  <Link href={href} className="hover:text-primary transition-colors shrink-0">
                     {label}
                   </Link>
                 )}
